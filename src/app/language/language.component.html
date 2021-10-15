@@ -1,0 +1,12 @@
+<div class="contactInfo language">
+    <h3 class="title">Language</h3>
+    <ul>
+        <li *ngFor="let item of language">
+            <span class="text">{{item.langs}}</span>
+            <span class="percent">
+                <div [style.width]="item.percentage+'%'"></div>
+            </span>
+        </li>
+    </ul>
+</div>
+

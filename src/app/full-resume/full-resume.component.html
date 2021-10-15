@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container">
+    <div class="left_Side">
+        <app-personal-info [info]="info"></app-personal-info>
+        <app-education [educations]="educations"></app-education>
+        <app-language [language]="language"></app-language>
+    </div>
+    <div class="right_Side">
+        <div class="about">
+            <h2 class="title2">Profile</h2>
+            <p>Strong in design and integration with intuitive problem-solving skills.
+                Proficient in ANGULAR, HTML, CSS,
+                PYTHON, JAVASCRIPT, and SQL. Passionate about implementing and launching new projects. Ability to
+                translate business requirements into technical solutions.<br> I have built few projects by myself and I
+                am looking for a role where can grow and learn from other experienced team members </p>
+        </div>
+        <app-experience [experience]='experience'></app-experience>
+        <app-professional-skill [skills]="skills"></app-professional-skill>
+        <app-intrest [intrest]="intrest"></app-intrest>
+    </div>
+</div>

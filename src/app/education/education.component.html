@@ -1,0 +1,11 @@
+<div class="contactInfo education">
+    <h3 class="title">Education</h3>
+    <ul>
+        <li *ngFor="let item of educations">  
+            <h5>{{item.startDate}} - {{item.endDate}}</h5>
+            <h4>{{item.course}}</h4>
+            <h4>{{item.institute}}</h4>
+            <h4>{{item.city}}</h4>
+        </li>
+    </ul>
+</div>

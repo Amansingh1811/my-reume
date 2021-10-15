@@ -1,0 +1,9 @@
+<div class="about skills">
+    <h2 class="title2">Professional Skill</h2>
+    <div class="box" *ngFor="let item of skills">
+        <h4>{{item.name}}</h4>
+        <div class="percent">
+            <div [style.width]="item.experience+'%'"></div>
+        </div>
+    </div>
+</div>

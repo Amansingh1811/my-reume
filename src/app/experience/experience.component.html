@@ -1,0 +1,15 @@
+<div class="about skills">
+    <h2 class="title2">Experience</h2>
+    <div class="box" *ngFor="let item of experience">
+        <div class="year_company">
+            <h5>{{item.startDate}}-{{item.endDate}}</h5>
+            <h5>{{item.companyName}}</h5>
+        </div>
+        <div class="text">
+            <h4>{{item.projectName}}</h4>
+            <p>{{item.projectDetail}}</p>
+        </div>
+        
+    </div>
+</div>
+
