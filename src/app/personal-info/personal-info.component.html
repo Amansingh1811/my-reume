@@ -1,24 +1,24 @@
-<div class="left_side">
+<div  *ngFor="let item of info">
     <div class="profileText">
         <div class="imgBx">
-            <img [src]="url">
+            <img [src]="item.photoURL">
         </div>
-        <h2>{{info.name}}</h2><span>{{info.workAs}}</span>
+        <h2>{{item.name}}</h2><span>{{item.workAs}}</span>
     </div>
     <div class="contactInfo">
         <h3 class="title">Contact Info</h3>
         <ul>
             <li>
                 <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                <span class="text">{{info.contactNo}}</span>
+                <span class="text">{{item.contactNo}}</span>
             </li>
             <li>
                 <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                <span class="text">{{info.email}}</span>
+                <span class="text">{{item.email}}</span>
             </li>
             <li>
                 <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                <span class="text">{{info.address}}</span>
+                <span class="text">{{item.address}}</span>
             </li>
         </ul>
     </div>

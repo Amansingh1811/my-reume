@@ -9,10 +9,10 @@ export class Education{
 
 
 export enum EducationType {
-    primarySchool,
-    secondrySchool,
-    diploma,
-    graduation,
-    postGraduation,
-    phd
+    primarySchool="primarySchool",
+    secondrySchool="secondrySchool",
+    diploma="diploma",
+    graduation="graduation",
+    postGraduation="postGraduation",
+    phd="phd"
 }

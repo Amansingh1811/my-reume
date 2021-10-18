@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EducationComponent } from './education/education.component';
 import { FullResumeComponent } from './full-resume/full-resume.component';
-import { IntrestComponent } from './intrest/intrest.component';
+import { InterestComponent } from './interest/interest.component';
 import { LanguageComponent } from './language/language.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { ProfessionalSkillComponent } from './professional-skill/professional-skill.component';
@@ -23,7 +23,7 @@ const appRoutes:Routes=[
     AppComponent,
     EducationComponent,
     FullResumeComponent,
-    IntrestComponent,
+    InterestComponent,
     LanguageComponent,
     PersonalInfoComponent,
     ProfessionalSkillComponent,
