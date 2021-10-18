@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Info } from './info.model';
 
 @Component({
@@ -7,8 +7,7 @@ import { Info } from './info.model';
   styleUrls: ['./personal-info.component.css']
 })
 export class PersonalInfoComponent implements OnInit {
-  @Input() info:Info;
-  url="./assets/img/amansingh.jpg";
+  @Input() info: Array<Info>;
   constructor() { }
 
   ngOnInit(): void {

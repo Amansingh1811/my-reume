@@ -1,9 +1,10 @@
 import { Education, EducationType } from './../education/educaton.model';
-import { Intrest } from '../intrest/intrest.model';
+import { Interest } from '../interest/interest.model';
 import { Skills } from '../professional-skill/skills.model';
 import { Component, OnInit, } from '@angular/core';
 import { Language } from '../language/language.model';
 import { Experience } from '../experience/experience.model';
+import { Info } from '../personal-info/info.model';
 
 
 
@@ -14,13 +15,14 @@ import { Experience } from '../experience/experience.model';
   styleUrls: ['./full-resume.component.css']
 })
 export class FullResumeComponent implements OnInit {
-  info={
+  info: Array<Info> = [{
     name: "Aman Singh",
+    photoURL: "../assets/img/amansingh.jpg",
     workAs: "Web Developer",
     contactNo: 7518426806,
     email: "aman.s1811@outlook.com",
     address: "Madhogunj Hardoi U.P."
-  };
+  }];
 
   educations: Array<Education> = [{
     institute: "S D L V S SH Ishwar Pur Sai",
@@ -77,21 +79,21 @@ export class FullResumeComponent implements OnInit {
     experience: 50
   },
   {
-    name:"Python",
-    experience:40
+    name: "Python",
+    experience: 40
   }];
 
-  intrest: Array<Intrest> = [{
-    intrests: "Playing Chess",
+  interest: Array<Interest> = [{
+    interests: "Playing Chess",
   },
   {
-    intrests: "listen music",
+    interests: "listen music",
   },
   {
-    intrests: "Watching Series",
+    interests: "Watching Series",
   },
   {
-    intrests: "Online Game",
+    interests: "Online Game",
   }];
 
   experience: Array<Experience> = [{
