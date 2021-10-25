@@ -8,6 +8,7 @@ import { Info } from './info.model';
 })
 export class PersonalInfoComponent implements OnInit {
   @Input() info: Array<Info>;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,126 +1,50 @@
-import { Education, EducationType } from './../education/educaton.model';
+import { ExperienceInfo } from './../data/experience';
+import { Info } from './../personal-info/info.model';
+import { Education} from './../education/educaton.model';
 import { Interest } from '../interest/interest.model';
 import { Skills } from '../professional-skill/skills.model';
 import { Component, OnInit, } from '@angular/core';
 import { Language } from '../language/language.model';
 import { Experience } from '../experience/experience.model';
-import { Info } from '../personal-info/info.model';
-
-
+import { Information } from '../data/info';
+import { EducationInfo } from '../data/education';
+import { SkillsInfo } from '../data/skills';
+import { InterestInfo } from '../data/interest';
+import { LanguageInfo } from '../data/language';
 
 
 @Component({
   selector: 'app-full-resume',
   templateUrl: './full-resume.component.html',
-  styleUrls: ['./full-resume.component.css']
+  styleUrls: ['./full-resume.component.css'],
+  providers: [Information,
+              EducationInfo,
+              ExperienceInfo,
+              SkillsInfo,
+              InterestInfo,
+              LanguageInfo]
 })
 export class FullResumeComponent implements OnInit {
-  info: Array<Info> = [{
-    name: "Aman Singh",
-    photoURL: "../assets/img/amansingh.jpg",
-    workAs: "Web Developer",
-    contactNo: 7518426806,
-    email: "aman.s1811@outlook.com",
-    address: "Madhogunj Hardoi U.P."
-  }];
+  language: Array<Language>
+  interest: Array<Interest>
+  experience: Array<Experience>
+  info: Array<Info>
+  educations: Array<Education>
+  skills: Array<Skills>
 
-  educations: Array<Education> = [{
-    institute: "S D L V S SH Ishwar Pur Sai",
-    course: "10TH",
-    startDate: 2014,
-    endDate: 2015,
-    city: "Hardoi Uttar Pradesh",
-    type: EducationType.primarySchool,
-  },
-  {
-    institute: "Lucknow Public School",
-    course: "12th",
-    startDate: 2016,
-    endDate: 2017,
-    city: "Hardoi Uttar Pradesh",
-    type: EducationType.secondrySchool,
-  },
-  {
-    institute: "Krishna Engineering College",
-    course: "B.tech",
-    startDate: 2018,
-    endDate: 2022,
-    city: "Ghaziabad Uttar Pradesh",
-    type: EducationType.graduation,
-  }];
-
-  language: Array<Language> = [{
-    langs: "English",
-    percentage: 60
-  },
-  {
-    langs: "Hindi",
-    percentage: 100
-  }];
-
-  skills: Array<Skills> = [{
-    name: "Angular",
-    experience: 20
-  },
-  {
-    name: "HTML",
-    experience: 30
-  },
-  {
-    name: "CSS",
-    experience: 50
-  },
-  {
-    name: "JavaScript",
-    experience: 40
-  },
-  {
-    name: "Git",
-    experience: 50
-  },
-  {
-    name: "Python",
-    experience: 40
-  }];
-
-  interest: Array<Interest> = [{
-    interests: "Playing Chess",
-  },
-  {
-    interests: "listen music",
-  },
-  {
-    interests: "Watching Series",
-  },
-  {
-    interests: "Online Game",
-  }];
-
-  experience: Array<Experience> = [{
-    projectName: "Spotify Clone",
-    projectDetail: "In this project, I am tring to make spotify Clone using javascript,html,css.",
-    startDate: 2021,
-    endDate: 2021,
-    skillUsed: "javascript,html,css",
-    companyName: "____"
-  },
-  {
-    projectName: "Covid Detail",
-    projectDetail: "In this project, I show you current patient of covid-19. In this project, I use JavaScript, html,css  ",
-    startDate: 2021,
-    endDate: 2021,
-    skillUsed: "javascript,html,css",
-    companyName: "____"
-  },
-  {
-    projectName: "Snake Game",
-    projectDetail: "In this project, I am tring to make a simple old game(Snake Game). In this project I have used html,css,and python",
-    startDate: 2021,
-    endDate: 2021,
-    skillUsed: "pyhton,html,css",
-    companyName: "____"
-  },]
-  constructor() { }
+  constructor(private infor: Information,
+              private educ: EducationInfo,
+              private exper: ExperienceInfo,
+              private skill: SkillsInfo,
+              private like: InterestInfo,
+              private lang: LanguageInfo) {
+    this.info = this.infor.getinfo();
+    this.educations = this.educ.geteductioninfo();
+    this.experience = this.exper.getexperiencedata();
+    this.skills = this.skill.getskillsdata();
+    this.interest = this.like.getinterestdata();
+    this.language = this.lang.languageData();
+  }
 
   ngOnInit(): void {
   }
