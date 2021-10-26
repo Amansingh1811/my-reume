@@ -31,22 +31,22 @@ export class FullResumeComponent implements OnInit {
   ngOnInit(): void {
 
     const education = new EducationInfo();
-    this.educations = education.EductionData();
+    this.educations = education.getEductionInfo();
 
     const info = new Information();
-    this.info = info.InfoData();
+    this.info = info.getInfo();
 
     const experience = new ExperienceInfo();
-    this.experience = experience.ExperienceData();
+    this.experience = experience.getExperienceInfo();
 
     const interest = new InterestInfo();
-    this.interest = interest.InterestData();
+    this.interest = interest.getInterestInfo();
 
     const language = new LanguageInfo();
-    this.language = language.LanguageData();
+    this.language = language.getLanguageInfo();
 
     const skill = new SkillsInfo();
-    this.skills = skill.SkillsData();
+    this.skills = skill.getSkillsInfo();
     
   }
 

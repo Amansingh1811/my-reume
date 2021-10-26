@@ -1,7 +1,7 @@
 import { Skills } from './../professional-skill/skills.model';
 
 export class SkillsInfo {
-  SkillsData(): Array<Skills> {
+  getSkillsInfo(): Array<Skills> {
     return [{
       name: "Angular",
       experience: 20

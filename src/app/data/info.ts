@@ -2,7 +2,7 @@ import { Info } from './../personal-info/info.model';
 
 
 export class Information {
-    InfoData(): Array<Info> {
+    getInfo(): Array<Info> {
         return [{
             name: "Aman Singh",
             photoURL: "../assets/img/amansingh.jpg",

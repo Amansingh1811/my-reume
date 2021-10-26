@@ -2,7 +2,7 @@ import { Education, EducationType } from './../education/educaton.model';
 
 
 export class EducationInfo {
-    EductionData(): Array<Education> {
+    getEductionInfo(): Array<Education> {
         return [{
             institute: "S D L V S SH Ishwar Pur Sai",
             course: "10TH",

@@ -1,7 +1,7 @@
 import { Language } from "../language/language.model";
 
 export class LanguageInfo {
-    LanguageData(): Array<Language> {
+    getLanguageInfo(): Array<Language> {
         return [{
             langs: "English",
             percentage: 60

@@ -2,7 +2,7 @@ import { Experience } from './../experience/experience.model';
 
 
 export class ExperienceInfo {
-  ExperienceData(): Array<Experience> {
+  getExperienceInfo(): Array<Experience> {
     return [{
       projectName: "Spotify Clone",
       projectDetail: "In this project, I am tring to make spotify Clone using javascript,html,css.",

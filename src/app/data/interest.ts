@@ -2,7 +2,7 @@ import { Interest } from './../interest/interest.model';
 
 
 export class InterestInfo {
-  InterestData(): Array<Interest> {
+  getInterestInfo(): Array<Interest> {
     return [{
       interests: "Playing Chess",
     },
