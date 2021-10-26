@@ -1,11 +1,8 @@
-import { Injectable } from '@angular/core';
 import { Education, EducationType } from './../education/educaton.model';
 
 
-@Injectable()
-
 export class EducationInfo {
-    geteductioninfo(): Array<Education> {
+    EductionData(): Array<Education> {
         return [{
             institute: "S D L V S SH Ishwar Pur Sai",
             course: "10TH",

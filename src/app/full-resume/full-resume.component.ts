@@ -1,6 +1,6 @@
 import { ExperienceInfo } from './../data/experience';
 import { Info } from './../personal-info/info.model';
-import { Education} from './../education/educaton.model';
+import { Education } from './../education/educaton.model';
 import { Interest } from '../interest/interest.model';
 import { Skills } from '../professional-skill/skills.model';
 import { Component, OnInit, } from '@angular/core';
@@ -17,12 +17,6 @@ import { LanguageInfo } from '../data/language';
   selector: 'app-full-resume',
   templateUrl: './full-resume.component.html',
   styleUrls: ['./full-resume.component.css'],
-  providers: [Information,
-              EducationInfo,
-              ExperienceInfo,
-              SkillsInfo,
-              InterestInfo,
-              LanguageInfo]
 })
 export class FullResumeComponent implements OnInit {
   language: Array<Language>
@@ -32,21 +26,28 @@ export class FullResumeComponent implements OnInit {
   educations: Array<Education>
   skills: Array<Skills>
 
-  constructor(private infor: Information,
-              private educ: EducationInfo,
-              private exper: ExperienceInfo,
-              private skill: SkillsInfo,
-              private like: InterestInfo,
-              private lang: LanguageInfo) {
-    this.info = this.infor.getinfo();
-    this.educations = this.educ.geteductioninfo();
-    this.experience = this.exper.getexperiencedata();
-    this.skills = this.skill.getskillsdata();
-    this.interest = this.like.getinterestdata();
-    this.language = this.lang.languageData();
-  }
+  constructor() { }
 
   ngOnInit(): void {
+
+    const education = new EducationInfo();
+    this.educations = education.EductionData();
+
+    const info = new Information();
+    this.info = info.InfoData();
+
+    const experience = new ExperienceInfo();
+    this.experience = experience.ExperienceData();
+
+    const interest = new InterestInfo();
+    this.interest = interest.InterestData();
+
+    const language = new LanguageInfo();
+    this.language = language.LanguageData();
+
+    const skill = new SkillsInfo();
+    this.skills = skill.SkillsData();
+    
   }
 
 }
